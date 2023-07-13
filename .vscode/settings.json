@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "deno.enable": true,
+  "deno.importMap": "import_map.json",
+  "deno.config": "deno.jsonc",
+  "deno.unstable": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
+}

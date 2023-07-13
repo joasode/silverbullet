@@ -1,0 +1,28 @@
+name: markdown
+assets:
+  - "assets/*"
+requiredPermissions:
+  - fs
+functions:
+  toggle:
+    path: "./markdown.ts:togglePreview"
+    command:
+      name: "Markdown Preview: Toggle"
+      key: Ctrl-p
+      mac: Cmd-p
+
+  preview:
+    path: "./preview.ts:updateMarkdownPreview"
+    events:
+      - plug:load
+      - editor:updated
+      - editor:pageLoaded
+      - editor:pageReloaded
+  previewClickHandler:
+    path: "./preview.ts:previewClickHandler"
+    events:
+      - preview:click
+
+  markdownWidget:
+    path: ./widget.ts:markdownWidget
+    codeWidget: markdown

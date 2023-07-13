@@ -1,0 +1,221 @@
+html {
+  --ui-accent-color: #464cfc;
+  --highlight-color: rgba(255, 255, 0, 0.5);
+  --link-color: #0330cb;
+  --link-missing-color: #9e4705;
+  --meta-color: #650007;
+  --meta-subtle-color: #959595;
+  --subtle-color: #676767;
+  --subtle-background-color: rgba(72, 72, 72, 0.1);
+
+  --root-background-color: inherit;
+  --root-color: inherit;
+
+  --top-color: inherit;
+  --top-background-color: #e1e1e1;
+  --top-border-color: #cacaca;
+  --top-sync-error-color: var(--top-color);
+  --top-sync-error-background-color: #fdf8cb;
+  --top-saved-color: #111;
+  --top-unsaved-color: #5e5e5e;
+  --top-loading-color: #7a7a7a;
+
+  --panel-background-color: #fff;
+  --panel-border-color: #fff;
+
+  --bhs-background-color: #fff;
+  --bhs-border-color: rgb(193, 193, 193);
+
+  --modal-color: inherit;
+  --modal-background-color: #fff;
+  --modal-border-color: rgb(108, 108, 108);
+  --modal-header-label-color: var(--ui-accent-color);
+  --modal-help-background-color: #eee;
+  --modal-help-color: #555;
+  --modal-selected-option-background-color: var(--ui-accent-color);
+  --modal-selected-option-color: #eee;
+  --modal-hint-background-color: #212476;
+  --modal-hint-color: #eee;
+
+  --notifications-background-color: inherit;
+  --notifications-border-color: rgb(41, 41, 41);
+  --notification-info-background-color: rgb(187, 221, 247);
+  --notification-error-background-color: rgb(255, 84, 84);
+
+  --action-button-background-color: transparent;
+  --action-button-color: #292929;
+  --action-button-hover-color: #0772be;
+
+  --editor-caret-color: black;
+  --editor-selection-background-color: #d7e1f6;
+  --editor-panels-bottom-color: inherit;
+  --editor-panels-bottom-background-color: #e1e1e1;
+  --editor-panels-bottom-border-color: #cacaca;
+  --editor-completion-detail-color: #555;
+  --editor-completion-detail-selected-color: #d2d2d2;
+  --editor-list-bullet-color: rgb(150, 150, 150);
+  --editor-heading-color: #333;
+  --editor-heading-meta-color: var(--meta-subtle-color);
+  --editor-hashtag-background-color: #002b6aad;
+  --editor-hashtag-color: #e2e9ff;
+  --editor-hashtag-border-color: #0120416b;
+  --editor-ruler-color: rgb(76, 75, 75);
+  --editor-naked-url-color: var(--link-color);
+  --editor-link-color: var(--link-color);
+  --editor-link-url-color: var(--link-color);
+  --editor-link-meta-color: var(--meta-subtle-color);
+  --editor-wiki-link-page-background-color: rgba(77, 141, 255, 0.07);
+  --editor-wiki-link-page-color: var(--link-color);
+  --editor-wiki-link-page-missing-color: var(--link-missing-color);
+  --editor-wiki-link-color: #8f96c2;
+  --editor-named-anchor-color: var(--meta-subtle-color);
+  --editor-command-button-color: inherit;
+  --editor-command-button-background-color: #e3dfdf;
+  --editor-command-button-hover-background-color: inherit;
+  --editor-command-button-meta-color: var(--meta-subtle-color);
+  --editor-command-button-border-color: gray;
+  --editor-line-meta-color: var(--meta-subtle-color);
+  --editor-meta-color: var(--meta-color);
+  --editor-table-head-background-color: #333;
+  --editor-table-head-color: #eee;
+  --editor-table-even-background-color: #f3f3f3;
+  --editor-blockquote-background-color: var(--subtle-background-color);
+  --editor-blockquote-color: var(--subtle-color);
+  --editor-blockquote-border-color: rgb(74, 74, 74);
+  --editor-code-background-color: var(--subtle-background-color);
+  --editor-struct-color: darkred;
+  --editor-highlight-background-color: var(--highlight-color);
+  --editor-code-comment-color: var(--meta-subtle-color);
+  --editor-code-variable-color: #024866;
+  --editor-code-typename-color: #038138;
+  --editor-code-string-color: #440377;
+  --editor-code-number-color: #440377;
+  --editor-code-info-color: var(--subtle-color);
+  --editor-code-atom-color: darkred;
+  --editor-admonition-note-border-color: rgb(0, 184, 212);
+  --editor-admonition-note-background-color: rgba(0, 184, 212, 0.1);
+  --editor-admonition-warning-border-color: rgb(255, 145, 0);
+  --editor-admonition-warning-background-color: rgba(255, 145, 0, 0.1);
+  --editor-frontmatter-background-color: rgba(255, 246, 189, 0.5);
+  --editor-frontmatter-color: var(--subtle-color);
+  --editor-frontmatter-marker-color: #89000080;
+  --editor-directive-background-color: rgb(233, 233, 233, 50%);
+  --editor-directive-border-color: #0000000f;
+  --editor-directive-color: #5b5b5b;
+  --editor-directive-info-color: var(--subtle-color);
+  --editor-task-marker-color: var(--subtle-color);
+
+  --ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --editor-font: "iA-Mono", "Menlo";
+  --editor-width: 800px;
+}
+
+html[data-theme="dark"] {
+  --ui-accent-color: #464cfc;
+  --highlight-color: rgba(255, 255, 0, 0.5);
+  --link-color: #7e99fc;
+  --link-missing-color: #9e4705;
+  --meta-color: #d6222e;
+  --meta-subtle-color: #959595;
+  --subtle-color: #959595;
+  --subtle-background-color: rgba(105, 105, 105, 0.1);
+
+  --root-background-color: #111;
+  --root-color: #fff;
+
+  --top-color: #fff;
+  --top-background-color: #262626;
+  --top-border-color: rgb(62, 62, 62);
+  --top-sync-error-color: var(--top-color);
+  --top-sync-error-background-color: #622626;
+  --top-saved-color: #fff;
+  --top-unsaved-color: #c7c7c7;
+  --top-loading-color: #c7c7c7;
+
+  --panel-background-color: #fff;
+  --panel-border-color: #fff;
+
+  --bhs-background-color: #fff;
+  --bhs-border-color: rgb(193, 193, 193);
+
+  --modal-color: #ccc;
+  --modal-background-color: #262626;
+  --modal-border-color: #6c6c6c;
+  --modal-header-label-color: var(--ui-accent-color);
+  --modal-help-background-color: #333;
+  --modal-help-color: #ccc;
+  --modal-selected-option-background-color: var(--ui-accent-color);
+  --modal-selected-option-color: #eee;
+  --modal-hint-background-color: #212476;
+  --modal-hint-color: #eee;
+
+  --notifications-background-color: #333;
+  --notifications-border-color: rgb(197, 197, 197);
+  --notification-info-background-color: #1b76bb;
+  --notification-error-background-color: #a32121;
+
+  --action-button-background-color: transparent;
+  --action-button-color: #adadad;
+  --action-button-hover-color: #37a1ed;
+
+  --editor-caret-color: #fff;
+  --editor-selection-background-color: #d7e1f630;
+  --editor-panels-bottom-color: #fff;
+  --editor-panels-bottom-background-color: #262626;
+  --editor-panels-bottom-border-color: rgb(62, 62, 62);
+  --editor-completion-detail-color: #555;
+  --editor-completion-detail-selected-color: #d2d2d2;
+  --editor-list-bullet-color: rgb(150, 150, 150);
+  --editor-heading-color: #d1d1d1;
+  --editor-heading-meta-color: var(--meta-subtle-color);
+  --editor-hashtag-background-color: #004bbb;
+  --editor-hashtag-color: #e2e9ff;
+  --editor-hashtag-border-color: #007bff6b;
+  --editor-ruler-color: rgb(76, 75, 75);
+  --editor-naked-url-color: var(--link-color);
+  --editor-link-color: var(--link-color);
+  --editor-link-url-color: var(--link-color);
+  --editor-link-meta-color: var(--meta-subtle-color);
+  --editor-wiki-link-page-background-color: #a3bce712;
+  --editor-wiki-link-page-color: var(--link-color);
+  --editor-wiki-link-page-missing-color: var(--link-missing-color);
+  --editor-wiki-link-color: #8f96c2;
+  --editor-named-anchor-color: var(--meta-subtle-color);
+  --editor-command-button-color: #fff;
+  --editor-command-button-background-color: #555;
+  --editor-command-button-hover-background-color: #777;
+  --editor-command-button-meta-color: var(--meta-subtle-color);
+  --editor-command-button-border-color: #666;
+  --editor-line-meta-color: var(--meta-subtle-color);
+  --editor-meta-color: var(--meta-color);
+  --editor-table-head-background-color: rgba(72, 72, 72, 0.4);
+  --editor-table-head-color: #eee;
+  --editor-table-even-background-color: rgba(72, 72, 72, 0.3);
+  --editor-blockquote-background-color: var(--subtle-background-color);
+  --editor-blockquote-color: var(--subtle-color);
+  --editor-blockquote-border-color: rgb(74, 74, 74);
+  --editor-code-background-color: var(--subtle-background-color);
+  --editor-struct-color: #d6222e;
+  --editor-highlight-background-color: var(--highlight-color);
+  --editor-code-comment-color: var(--meta-subtle-color);
+  --editor-code-variable-color: #41a3ce;
+  --editor-code-typename-color: #038138;
+  --editor-code-string-color: #986db9;
+  --editor-code-number-color: #986db9;
+  --editor-code-info-color: var(--subtle-color);
+  --editor-code-atom-color: #d6222e;
+  --editor-admonition-note-border-color: rgb(0, 184, 212);
+  --editor-admonition-note-background-color: rgba(0, 184, 212, 0.2);
+  --editor-admonition-warning-border-color: rgb(255, 145, 0);
+  --editor-admonition-warning-background-color: rgba(255, 145, 0, 0.2);
+  --editor-frontmatter-background-color: rgb(41, 40, 35, 0.5);
+  --editor-frontmatter-color: var(--subtle-color);
+  --editor-frontmatter-marker-color: #fff;
+  --editor-directive-background-color: rgba(72, 72, 72, 0.2);
+  --editor-directive-border-color: #0000000f;
+  --editor-directive-color: #5b5b5b;
+  --editor-directive-info-color: var(--subtle-color);
+  --editor-task-marker-color: var(--subtle-color);
+}

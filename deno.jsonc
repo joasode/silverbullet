@@ -1,0 +1,52 @@
+{
+  "tasks": {
+    "clean": "rm -rf dist dist_client_bundle dist_plug_bundle website_build",
+    "install": "deno install -f -A --importmap import_map.json silverbullet.ts",
+    "check": "find . -name '*.ts*' | xargs deno check",
+    "test": "deno test -A --unstable",
+    "build": "deno run -A build_plugs.ts && deno run -A --unstable build_web.ts",
+    "plugs": "deno run -A build_plugs.ts",
+    "watch-web": "deno run -A --check build_web.ts --watch",
+    "server": "deno run -A --check silverbullet.ts",
+    "watch-server": "deno run -A --check --watch silverbullet.ts",
+    // The only reason to run a shell script is that deno task doesn't support globs yet (e.g. *.plug.yaml)
+    "watch-plugs": "deno run -A --check build_plugs.ts -w",
+    "bundle": "deno run -A build_bundle.ts",
+    // Regenerates some bundle files (checked into the repo)
+    // Install lezer-generator with "npm install -g @lezer/generator"
+    "generate": "lezer-generator common/markdown_parser/query.grammar -o common/markdown_parser/parse-query.js",
+
+    // Compile
+    "compile": "deno task bundle && deno compile -A -o silverbullet dist/silverbullet.js",
+    "server:dist:linux-x86_64": "deno task bundle && deno compile -A --target x86_64-unknown-linux-gnu dist/silverbullet.js -o silverbullet && zip silverbullet-server-linux-x86_64.zip silverbullet",
+    "server:dist:darwin-x86_64": "deno task bundle && deno compile -A --target x86_64-apple-darwin dist/silverbullet.js -o silverbullet && zip silverbullet-server-darwin-x86_64.zip silverbullet",
+    "server:dist:darwin-aarch64": "deno task bundle && deno task bundle && deno compile -A --target aarch64-apple-darwin dist/silverbullet.js -o silverbullet && zip silverbullet-server-darwin-aarch64.zip silverbullet",
+    "server:dist:windows-x86_64": "deno compile -A --target x86_64-pc-windows-msvc dist/silverbullet.js -o silverbullet.exe && zip silverbullet-server-windows-x86_64.zip silverbullet.exe"
+  },
+
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/preact@10.11.1"
+  },
+  "importMap": "import_map.json",
+  "lint": {
+    "exclude": [
+      "dist",
+      "dist_bundle"
+    ],
+    "rules": {
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "fmt": {
+    "exclude": [
+      "dist",
+      "dist_bundle",
+      "website",
+      "website_build",
+      "test_space",
+      "README.md"
+    ]
+  }
+}

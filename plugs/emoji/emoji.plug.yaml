@@ -1,0 +1,7 @@
+name: emoji
+functions:
+  emojiCompleter:
+    path: "./emoji.ts:emojiCompleter"
+    events:
+      - editor:complete
+      - minieditor:complete
